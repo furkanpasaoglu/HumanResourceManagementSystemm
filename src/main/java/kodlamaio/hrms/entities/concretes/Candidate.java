@@ -1,17 +1,19 @@
 package kodlamaio.hrms.entities.concretes;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@PrimaryKeyJoinColumn(name = "user_id")
 @Table(name = "candidates")
-public class Candidate {
-    @Id
-    @Column(name = "user_id")
-    private int user_id;
+public class Candidate extends User {
 
     @Column(name = "first_name")
     private String first_name;
