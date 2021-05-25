@@ -12,7 +12,7 @@
 9. Daha önce kayıtlı e-posta ve tcno alanlarının kontrolü için işlemler eklendi. ✔️
 10. Ekleme işleminde girilen alanların boş olup olmadığını kontrol eden işlemler eklendi. ✔️
 11. Result yapısı daha güzel çıktılar alınabilmesi için entegre edildi.  ✔️
-12. Mesaj yapısı daha güzel hale getirildi.
+12. Mesaj yapısı daha güzel hale getirildi. ✔️
 13. İş Motoru ve Kural Motorları eklendi.  ✔️
 
 
