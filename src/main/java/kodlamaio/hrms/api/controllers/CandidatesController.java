@@ -30,4 +30,8 @@ public class CandidatesController {
         return this.candidateService.add(candidate);
     }
 
+    @GetMapping("/getbyemail/{email}")
+    public DataResult<List<Candidate>> getByEmail(String email){
+        return this.candidateService.findByEmployerEmail(email);
+    }
 }

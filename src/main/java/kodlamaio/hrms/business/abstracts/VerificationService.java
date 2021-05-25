@@ -9,5 +9,4 @@ public interface VerificationService {
     DataResult<Boolean> checkForEmail(String... emails);
     Result sendVerificationMail();
     Result verifiedUser();
-    Result noVerifiedUser();
 }

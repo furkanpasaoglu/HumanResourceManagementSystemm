@@ -12,6 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @PrimaryKeyJoinColumn(name = "user_id")
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name ="employers")
 public class Employer extends User {
 

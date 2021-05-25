@@ -1,8 +1,7 @@
 package kodlamaio.hrms.business.concretes;
 
 import kodlamaio.hrms.business.abstracts.UserService;
-import kodlamaio.hrms.core.utilities.business.BusinessRules;
-import kodlamaio.hrms.core.utilities.results.ErrorResult;
+import kodlamaio.hrms.business.constants.Messages;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.UserDao;
@@ -22,18 +21,8 @@ public class UserManager implements UserService {
 
     @Override
     public Result register(User user) {
-        var result = BusinessRules.run(checkForUser(user));
-        if(result !=null)
-            return new ErrorResult("Lütfen Boş Alanları Doldurunuz");
-
         this.userDao.save(user);
-        return new SuccessResult("Başarıyla Kaydedildi.");
-    }
-
-    private Result checkForUser(User user){
-        if(user.getPassword()==user.getConfirm_password()){
-            return new SuccessResult();
-        }
-        return new ErrorResult();
+        System.out.println("Kayıt İşlemi Başarılı");
+        return new SuccessResult(Messages.Added);
     }
 }

@@ -1,6 +1,7 @@
 package kodlamaio.hrms.business.concretes;
 
 import kodlamaio.hrms.business.abstracts.VerificationService;
+import kodlamaio.hrms.business.constants.Messages;
 import kodlamaio.hrms.core.utilities.results.*;
 import kodlamaio.hrms.dataAccess.abstracts.VerificationDao;
 import kodlamaio.hrms.entities.concretes.User;
@@ -32,7 +33,8 @@ public class VerificationManager implements VerificationService {
 
 
         this.verificationDao.save(verification);
-        return new SuccessResult();
+        System.out.println("Doğrulama İşlemi Yapıldı");
+        return new SuccessResult(Messages.Added);
     }
 
     @Override
@@ -41,7 +43,6 @@ public class VerificationManager implements VerificationService {
             if(email.contains("@gmail") || email.contains("@hotmail") || email.contains("@outlook"))
                 return new SuccessDataResult<Boolean>();
         }
-        System.out.println("Üye İseniz Lütfen Gmail,Hotmail veya Outlook E-Postası İle Kayıt Olun veya İş Veren İseniz Lütfen Size Ait Şirket E-Posta Bilgisini Giriniz.");
         return new ErrorDataResult<Boolean>();
     }
 
@@ -55,11 +56,5 @@ public class VerificationManager implements VerificationService {
     public Result verifiedUser() {
         System.out.println("Doğrulama İşlemi Başarı İle Sonuçlanmıştır!");
         return new SuccessResult();
-    }
-
-    @Override
-    public Result noVerifiedUser() {
-        System.out.println("Doğrulama İşlemi Başarısız Oldu!");
-        return new ErrorResult();
     }
 }

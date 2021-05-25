@@ -28,4 +28,8 @@ public class EmployersController {
     public Result add(@RequestBody Employer employer){
         return this.employerService.add(employer);
     }
+    @GetMapping("/getbyemail/{email}")
+    public DataResult<List<Employer>> getByEmail(String email){
+        return this.employerService.findByEmployerEmail(email);
+    }
 }

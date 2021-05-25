@@ -4,8 +4,7 @@ import kodlamaio.hrms.entities.concretes.Employer;
 
 public class EmployerValidator {
     public static boolean Validator(Employer employer){
-        if(employer.getWebsite().isEmpty() && employer.getCompany_name().isEmpty() && employer.getPhone().isEmpty()){
-            System.out.println("Lütfen Boş Alan Bırakmayınız");
+        if(employer.getWebsite().isEmpty() || employer.getCompany_name().isEmpty() || employer.getPhone().isEmpty()){
             return false;
         }
         return true;
