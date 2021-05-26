@@ -1,8 +1,5 @@
-package kodlamaio.hrms.hrmsVerifications;
+package kodlamaio.hrms.webServices.hrmsVerifications;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public class HrmsVerificationManager {
     public boolean emptyCheckerForUser(String identityNumber){
         if(identityNumber.length()<=11 && identityNumber.length()>10){

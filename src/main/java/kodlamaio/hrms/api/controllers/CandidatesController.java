@@ -34,4 +34,9 @@ public class CandidatesController {
     public DataResult<List<Candidate>> getByEmail(String email){
         return this.candidateService.findByEmployerEmail(email);
     }
+
+    @GetMapping("/getbyidentitynumber/{identitynumber}")
+    public DataResult<List<Candidate>> getByIdentityNumber(String identitynumber){
+        return this.candidateService.findByEmployerIdentityNumber(identitynumber);
+    }
 }

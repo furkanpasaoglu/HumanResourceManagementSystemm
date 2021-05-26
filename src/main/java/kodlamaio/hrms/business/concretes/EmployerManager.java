@@ -40,8 +40,8 @@ public class EmployerManager implements EmployerService {
 
         if(validator){
             if(result !=null){
-                System.out.println(Messages.EmployerCannotRepeat);
-                return new ErrorResult(Messages.EmployerCannotRepeat);
+                System.out.println(Messages.CannotRepeat);
+                return new ErrorResult(Messages.CannotRepeat);
             }
 
             if(!verification){

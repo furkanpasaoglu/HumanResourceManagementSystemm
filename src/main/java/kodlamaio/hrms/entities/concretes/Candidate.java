@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -22,10 +23,10 @@ public class Candidate extends User {
     private String last_name;
 
     @Column(name = "identity_number")
-    private String identity_number;
+    private String identityNumber;
 
     @Column(name = "year_of_birth")
-    private Date year_of_birth;
+    private LocalDate year_of_birth;
 
     @Column(name = "create_date")
     private Date create_date;
