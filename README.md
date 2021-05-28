@@ -14,6 +14,11 @@
 11. Result yapısı daha güzel çıktılar alınabilmesi için entegre edildi.  ✔️
 12. Mesaj yapısı daha güzel hale getirildi. ✔️
 13. İş Motoru ve Kural Motorları eklendi.  ✔️
+14. İş verenler sisteme iş ilanı ekleyebilmelidir.  ✔️
+15. Sistemdeki tüm aktif iş ilanları listelenebilmelidir. ✔️
+16. Sistemdeki tüm aktif iş ilanları tarihe göre listelenebilmelidir. ✔️
+17. Sistemde bir firmaya ait tüm aktif iş ilanları listelenebilmelidir.  ✔️
+18. İş verenler sistemdeki bir ilanı kapatabilmelidir. (Pasif ilan)  ✔️
 
 
 
@@ -177,6 +182,60 @@
             <td>12345678</td>
             <td>10.05.2021</td>
             <td>true</td>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Cities
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>city_id</th>
+            <th>city_name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Adana</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Adıyaman</td>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Job Advertisements
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>job_advertisement_id</th>
+            <th>employer_id</th>
+            <th>job_position_id</th>
+            <th>city_id</th>
+            <th>description</th>
+            <th>salary_min</th>
+            <th>salary_max</th>
+            <th>number_of_open_job_position</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>Info: Test 1</th>
+            <th>2500</th>
+            <th>3500</th>
+            <th>5</th>
+            <th>28/05/2021</th>
+            <th>true</th>
         </tr>
     </tbody>
 </table>

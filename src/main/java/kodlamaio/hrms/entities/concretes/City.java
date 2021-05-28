@@ -11,25 +11,26 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "cities")
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "job_positions")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdvertisements"})
-public class JobPosition {
+public class City {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "job_position_id")
-    private int job_position_id;
+    @Column(name = "city_id")
+    private int cityId;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "city_name")
+    private String cityName;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;
 
-    @OneToMany(mappedBy = "jobPosition")
+    @OneToMany(mappedBy = "city")
     private List<JobAdvertisement> jobAdvertisements;
 }

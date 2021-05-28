@@ -46,6 +46,30 @@ CREATE TABLE public.employers
 COMMENT ON TABLE public.employers
     IS 'İş Verenler';
 
+CREATE TABLE public.cities
+(
+    city_id integer NOT NULL generated always as identity (start with 1 increment by 1),
+    city_name character varying(25) NOT NULL,
+    create_date date NOT NULL DEFAULT date(now()),
+    active boolean NOT NULL DEFAULT true,
+    PRIMARY KEY (user_id)
+);
+
+CREATE TABLE public.job_advertisements
+(
+    job_advertisement_id integer NOT NULL generated always as identity (start with 1 increment by 1),
+    employer_id integer NOT NULL,
+    job_position_id integer NOT NULL,
+    city_id integer NOT NULL,
+    salary_min integer,
+    salary_max integer,
+    number_of_open_job_position character varying(3) NOT NULL,
+    application_deadline DATE NOT NULL,
+    create_date date NOT NULL DEFAULT date(now()),
+    active boolean NOT NULL DEFAULT true,
+    PRIMARY KEY (user_id)
+);
+
 CREATE TABLE public.verifications
 (
     user_id integer NOT NULL,
