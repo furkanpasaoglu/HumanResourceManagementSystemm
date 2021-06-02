@@ -19,6 +19,8 @@
 16. Sistemdeki tüm aktif iş ilanları tarihe göre listelenebilmelidir. ✔️
 17. Sistemde bir firmaya ait tüm aktif iş ilanları listelenebilmelidir.  ✔️
 18. İş verenler sistemdeki bir ilanı kapatabilmelidir. (Pasif ilan)  ✔️
+19. Adaylar sisteme CV girişi yapabilmelidir.  ✔️
+20. Bir adaya ait tüm CV bilgisi görüntülenebilmelidir. ✔️
 
 
 
@@ -263,6 +265,145 @@
             <td>false</td>
             <td>10.05.2021</td>
             <td>true</td>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Resumes
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>resume_id</th>
+            <th>education_id</th>
+            <th>work_experience_id</th>
+            <th>candidate_id</th>
+            <th>foreign_language_id</th>
+            <th>cover_letter</th>
+            <th>github_link</th>
+            <th>linkedin_link</th>
+            <th>image_url</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>Deneme Önyazı</th>
+            <th>furkanpasaoglu</th>
+            <th>furkanpasaoglu</th>
+            <th>cloudinary.com</th>
+            <th>02/06/2021</th>
+            <th>true</th>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Work Experiences
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>work_experience_id</th>
+            <th>job_name</th>
+            <th>job_position_name</th>
+            <th>candidate_id</th>
+            <th>start_date</th>
+            <th>end_date</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>Deneme</th>
+            <th>Deneme deneme</th>
+            <th>1</th>
+            <th>06/08/2020</th>
+            <th>05/06/2021</th>
+            <th>02/06/2021</th>
+            <th>true</th>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Technologies
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>technology_id</th>
+            <th>name</th>
+            <th>candidate_id</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>C#</th>
+            <th>1</th>
+            <th>02/06/2021</th>
+            <th>true</th>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Foreign Languages
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>foreign_language_id</th>
+            <th>language_name</th>
+            <th>language_level</th>
+            <th>candidate_id</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>İngilizce</th>
+            <th>3</th>
+            <th>1</th>
+            <th>06/02/2021</th>
+            <th>true</th>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Educations
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>education_id</th>
+            <th>candidate_id</th>
+            <th>school_name</th>
+            <th>start_date</th>
+            <th>graduation_date</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>Kocaeli Üniversitesi</th>
+            <th>02/06/2020</th>
+            <th>02/07/2020</th>
+            <th>02/06/2021</th>
+            <th>true</th>
         </tr>
     </tbody>
 </table>
