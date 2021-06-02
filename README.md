@@ -21,12 +21,14 @@
 18. İş verenler sistemdeki bir ilanı kapatabilmelidir. (Pasif ilan)  ✔️
 19. Adaylar sisteme CV girişi yapabilmelidir.  ✔️
 20. Bir adaya ait tüm CV bilgisi görüntülenebilmelidir. ✔️
+21. Cloudinary Eklendi. ✔️
 
 
 
 ![databaseandtables](https://user-images.githubusercontent.com/16624085/117002547-58fa7380-acec-11eb-9d13-9b8ac5f4532b.png)
 ## :sparkles: PostgreSQL Database Tables
 - [HRMS.sql](https://github.com/furkanpasaoglu/HumanResourceManagementSystem/blob/master/hrms.sql) *(Tablonuzu linkde gördüğünüz şekilde oluşturun)*
+- [Cloudinary](https://github.com/furkanpasaoglu/HumanResourceManagementSystem/blob/master/src/main/java/kodlamaio/hrms/core/utilities/helpers/CloudinaryManager.java) *(Burayı Cloudinary hesabı oluşturarak doldurunuz)*
 ### :pushpin: Candidates
 <table style="text-align:center">
     <thead>
