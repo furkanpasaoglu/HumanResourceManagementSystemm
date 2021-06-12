@@ -410,5 +410,47 @@
     </tbody>
 </table>
 
+###  :pushpin: Type Of Works
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>id</th>
+            <th>name</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>id</th>
+            <th>test</th>
+            <th>12/06/2021</th>
+            <th>true</th>
+        </tr>
+    </tbody>
+</table>
+
+###  :pushpin: Job Types
+
+<table>
+    <thead>
+        <tr style="color:#ff9f43; background-color:#222f3e;">
+            <th>id</th>
+            <th>name</th>
+            <th>create_date</th>
+            <th>active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>id</th>
+            <th>test</th>
+            <th>12/06/2021</th>
+            <th>true</th>
+        </tr>
+    </tbody>
+</table>
+
 ## :pencil2:Authors
 * **Furkan Paşaoğlu** - [furkanpasaoglu](https://github.com/furkanpasaoglu)
