@@ -11,12 +11,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/workexperiences")
+@CrossOrigin
 public class WorkExperiencesController {
     private WorkExperienceService workExperienceService;
 
     @Autowired
     public WorkExperiencesController(WorkExperienceService workExperienceService) {
         this.workExperienceService = workExperienceService;
+    }
+
+    @GetMapping("/getAll")
+    public DataResult<List<WorkExperience>> getAll(){
+        return this.workExperienceService.getAll();
     }
 
     @PostMapping("/add")

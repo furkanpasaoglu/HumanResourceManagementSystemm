@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/resumes")
+@CrossOrigin
 public class ResumesController {
     private ResumeService resumeService;
 
@@ -30,12 +31,12 @@ public class ResumesController {
         return this.resumeService.findByResumeId(id);
     }
 
-    @GetMapping("/getall")
+    @GetMapping("/getAll")
     public DataResult<List<Resume>> getAll() {
         return this.resumeService.getAll();
     }
 
-    @PostMapping("/addimage")
+    @PostMapping("/addImage")
     public Result addImage(@RequestParam int id,@RequestPart MultipartFile file){
         return this.resumeService.addImage(id,file);
     }

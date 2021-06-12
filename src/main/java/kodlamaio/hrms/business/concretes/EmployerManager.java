@@ -50,7 +50,7 @@ public class EmployerManager implements EmployerService {
                 this.verificationService.add(saveEmployer);
                 this.employerVerificationService.add(employer);
 
-                System.out.println("Şirket: "+employer.getCompany_name() + " " + Messages.Successful);
+                System.out.println("Şirket: "+employer.getCompanyName() + " " + Messages.Successful);
                 return new SuccessResult(Messages.Successful);
             }
             System.out.println(Messages.RegistrationError);
@@ -67,7 +67,7 @@ public class EmployerManager implements EmployerService {
 
     @Override
     public DataResult<List<Employer>> findByEmployerEmail(String email) {
-        return new SuccessDataResult<List<Employer>>(this.employerDao.findByEmail(email));
+        return new SuccessDataResult<List<Employer>>(this.employerDao.findByEmail(email),Messages.Listed);
     }
 
     private Result checkForEmail(String email){

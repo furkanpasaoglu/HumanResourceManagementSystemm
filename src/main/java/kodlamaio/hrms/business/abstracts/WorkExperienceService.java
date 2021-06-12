@@ -9,4 +9,5 @@ import java.util.List;
 public interface WorkExperienceService {
     Result add(WorkExperience workExperience);
     DataResult<List<WorkExperience>> findAllByOrderByEndDateDesc();
+    DataResult<List<WorkExperience>> getAll();
 }

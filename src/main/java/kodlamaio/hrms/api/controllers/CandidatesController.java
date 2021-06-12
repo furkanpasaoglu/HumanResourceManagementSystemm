@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/candidates")
+@CrossOrigin
 public class CandidatesController {
     private CandidateService candidateService;
 
@@ -20,7 +21,7 @@ public class CandidatesController {
         this.candidateService = candidateService;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/getAll")
     public DataResult<List<Candidate>> getAll(){
         return this.candidateService.getAll();
     }
@@ -30,13 +31,13 @@ public class CandidatesController {
         return this.candidateService.add(candidate);
     }
 
-    @GetMapping("/getbyemail/{email}")
+    @GetMapping("/getByEmail")
     public DataResult<List<Candidate>> getByEmail(String email){
         return this.candidateService.findByEmployerEmail(email);
     }
 
-    @GetMapping("/getbyidentitynumber/{identitynumber}")
-    public DataResult<List<Candidate>> getByIdentityNumber(String identitynumber){
-        return this.candidateService.findByEmployerIdentityNumber(identitynumber);
+    @GetMapping("/getByIdentityNumber")
+    public DataResult<List<Candidate>> getByIdentityNumber(String identityNumber){
+        return this.candidateService.findByEmployerIdentityNumber(identityNumber);
     }
 }

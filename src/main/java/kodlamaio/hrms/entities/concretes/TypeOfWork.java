@@ -10,30 +10,26 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@PrimaryKeyJoinColumn(name = "user_id")
-@Inheritance(strategy = InheritanceType.JOINED)
-@Table(name ="employers")
+@Entity
+@Table(name = "type_of_works")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdvertisements"})
-public class Employer extends User {
+public class TypeOfWork {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
-    @Column(name = "company_name")
-    private String companyName;
-
-    @Column(name = "website")
-    private String website;
-
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;
 
-    @OneToMany(mappedBy = "employer")
+    @OneToMany(mappedBy = "typeOfWork")
     private List<JobAdvertisement> jobAdvertisements;
 }

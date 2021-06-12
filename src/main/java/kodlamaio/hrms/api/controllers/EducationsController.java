@@ -11,12 +11,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/educations")
+@CrossOrigin
 public class EducationsController {
     private EducationService educationService;
 
     @Autowired
     public EducationsController(EducationService educationService) {
         this.educationService = educationService;
+    }
+
+    @GetMapping("getAll")
+    public Result getAll(){
+        return this.educationService.getAll();
     }
 
     @PostMapping("/add")

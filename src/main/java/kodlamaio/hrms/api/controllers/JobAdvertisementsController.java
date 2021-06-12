@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/jobadvertisement")
+@CrossOrigin
 public class JobAdvertisementsController {
     private JobAdvertisementService jobAdvertisementService;
 
@@ -22,6 +23,11 @@ public class JobAdvertisementsController {
     @PostMapping("/add")
     public Result add(@RequestBody JobAdvertisement jobAdvertisement){
         return this.jobAdvertisementService.add(jobAdvertisement);
+    }
+
+    @GetMapping("/getAll")
+    public DataResult<List<JobAdvertisement>> getAll(){
+        return this.jobAdvertisementService.getAll();
     }
 
     @GetMapping("/findByActiveTrue")

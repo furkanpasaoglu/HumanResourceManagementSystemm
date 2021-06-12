@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/jobpositions")
+@CrossOrigin
 public class JobPositionsController {
     private JobPositionService jobPositionService;
 
@@ -19,7 +20,7 @@ public class JobPositionsController {
         this.jobPositionService = jobPositionService;
     }
 
-    @GetMapping("/getall")
+    @GetMapping("/getAll")
     public DataResult<List<JobPosition>> getAll(){
         return this.jobPositionService.getAll();
     }
@@ -29,7 +30,7 @@ public class JobPositionsController {
         return this.jobPositionService.add(jobPosition);
     }
 
-    @GetMapping("/getbyname/{jobPositionName}")
+    @GetMapping("/getByName")
     public DataResult<List<JobPosition>> getByName(String jobPositionName){
         return this.jobPositionService.findByJobPositionName(jobPositionName);
     }

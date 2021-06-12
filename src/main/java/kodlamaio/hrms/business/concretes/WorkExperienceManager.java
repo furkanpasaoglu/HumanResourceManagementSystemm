@@ -32,4 +32,9 @@ public class WorkExperienceManager implements WorkExperienceService {
     public DataResult<List<WorkExperience>> findAllByOrderByEndDateDesc() {
         return new SuccessDataResult<List<WorkExperience>>(this.workExperienceDao.findAllByOrderByEndDateDesc(),Messages.Listed);
     }
+
+    @Override
+    public DataResult<List<WorkExperience>> getAll() {
+        return new SuccessDataResult<List<WorkExperience>>(this.workExperienceDao.findAll(), Messages.Listed);
+    }
 }

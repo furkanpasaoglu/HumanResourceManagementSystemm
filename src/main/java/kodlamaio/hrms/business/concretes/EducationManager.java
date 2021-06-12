@@ -29,6 +29,11 @@ public class EducationManager implements EducationService {
     }
 
     @Override
+    public DataResult<List<Education>> getAll() {
+        return new SuccessDataResult<List<Education>>(this.educationDao.findAll(),Messages.Listed);
+    }
+
+    @Override
     public DataResult<List<Education>> findAllByOrderByGraduationDateAsc() {
         return new SuccessDataResult<List<Education>>(this.educationDao.findAllByOrderByGraduationDateAsc(), Messages.Listed);
     }

@@ -56,4 +56,9 @@ public class JobAdvertisementManager implements JobAdvertisementService {
     public DataResult<List<JobAdvertisement>> findByActiveTrueAndEmployer(int employerId) {
         return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findByActiveTrueAndEmployerId(employerId), Messages.Listed);
     }
+
+    @Override
+    public DataResult<List<JobAdvertisement>> getAll() {
+        return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findAll(), Messages.Listed);
+    }
 }
