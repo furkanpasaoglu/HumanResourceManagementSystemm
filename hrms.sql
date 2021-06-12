@@ -188,6 +188,25 @@ CREATE TABLE public.job_positions
 
 COMMENT ON TABLE public.job_positions
     IS 'İş Pozisyonu';
+    
+CREATE TABLE public.type_of_works
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    create_date date NOT NULL DEFAULT date(now()),
+    active boolean NOT NULL DEFAULT true,
+    CONSTRAINT type_of_works_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE public.job_types
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    create_date date NOT NULL DEFAULT date(now()),
+    active boolean NOT NULL DEFAULT true,
+    CONSTRAINT job_types_pkey PRIMARY KEY (id)
+);
+
 
 ALTER TABLE public.candidates
     ADD FOREIGN KEY (user_id)
