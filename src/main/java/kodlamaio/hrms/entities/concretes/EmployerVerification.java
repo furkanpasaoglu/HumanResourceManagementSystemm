@@ -15,13 +15,13 @@ import java.util.Date;
 public class EmployerVerification {
     @Id
     @Column(name = "employer_id")
-    private int empoloyer_id;
+    private int employerId;
 
     @Column(name = "confirm")
     private boolean confirm;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;

@@ -29,7 +29,7 @@ public class Employer extends User {
     private String phone;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;

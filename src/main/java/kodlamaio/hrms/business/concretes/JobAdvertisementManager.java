@@ -10,7 +10,6 @@ import kodlamaio.hrms.dataAccess.abstracts.JobAdvertisementDao;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -31,9 +30,9 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
     @Override
     public Result update(JobAdvertisement jobAdvertisement) {
-        var jobAdvertisement1 = this.jobAdvertisementDao.getOne(jobAdvertisement.getJobAdvertisementId());
-        jobAdvertisement1.setActive(false);
-        this.jobAdvertisementDao.save(jobAdvertisement1);
+        //var getJobDetail = this.jobAdvertisementDao.getOne(jobAdvertisement.getJobAdvertisementId());
+        //jobAdvertisement.setJobAdvertisementId(getJobDetail.getJobAdvertisementId());
+        this.jobAdvertisementDao.save(jobAdvertisement);
         return new SuccessResult(Messages.Updated);
     }
 
@@ -61,4 +60,10 @@ public class JobAdvertisementManager implements JobAdvertisementService {
     public DataResult<List<JobAdvertisement>> getAll() {
         return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.findAll(), Messages.Listed);
     }
+
+    @Override
+    public DataResult<JobAdvertisement> getById(int id) {
+        return new SuccessDataResult<JobAdvertisement>(this.jobAdvertisementDao.findById(id),Messages.Listed);
+    }
+
 }

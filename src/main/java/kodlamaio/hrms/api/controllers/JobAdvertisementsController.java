@@ -30,6 +30,11 @@ public class JobAdvertisementsController {
         return this.jobAdvertisementService.getAll();
     }
 
+    @GetMapping("/getById")
+    public DataResult<JobAdvertisement> getById(@RequestParam int id){
+        return this.jobAdvertisementService.getById(id);
+    }
+
     @GetMapping("/findByActiveTrue")
     public DataResult<List<JobAdvertisement>> findByActiveTrue(){
         return this.jobAdvertisementService.findByActiveTrue();

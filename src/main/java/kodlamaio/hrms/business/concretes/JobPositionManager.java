@@ -41,7 +41,7 @@ public class JobPositionManager implements JobPositionService {
 
     @Override
     public DataResult<List<JobPosition>> findByJobPositionName(String jobPositionName) {
-        return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findByName(jobPositionName));
+        return new SuccessDataResult<List<JobPosition>>(this.jobPositionDao.findByName(jobPositionName),Messages.Listed);
     }
 
     private Result checkForUserExist(String jobPositionName){

@@ -15,9 +15,9 @@ public class MernisManagerAdapter implements MernisService {
         try{
            return this.qmqkpsPublicSoap.TCKimlikNoDogrula(
                    Long.valueOf(candidate.getIdentityNumber()),
-                   candidate.getFirst_name().toUpperCase(Locale.ROOT),
-                   candidate.getLast_name().toUpperCase(Locale.ROOT),
-                   candidate.getYear_of_birth().getYear());
+                   candidate.getFirstName().toUpperCase(Locale.ROOT),
+                   candidate.getLastName().toUpperCase(Locale.ROOT),
+                   candidate.getYearOfBirth().getYear());
         }catch (Exception e) {
             e.printStackTrace();
         }

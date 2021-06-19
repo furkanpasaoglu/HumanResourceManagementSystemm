@@ -25,9 +25,9 @@ public class EmployerVerificationManager implements EmployerVerificationService 
     @Override
     public Result add(Employer employer) {
         this.verification = new EmployerVerification();
-        this.verification.setEmpoloyer_id(employer.getId());
+        this.verification.setEmployerId(employer.getId());
         this.verification.setConfirm(true);
-        this.verification.setCreate_date(new Date());
+        this.verification.setCreateDate(new Date());
 
         this.employerVerificationDao.save(this.verification);
         System.out.println("İş Verene Doğrulama İsteği Gönderildi.");

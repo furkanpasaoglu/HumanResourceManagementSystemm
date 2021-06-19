@@ -55,7 +55,7 @@ public class CandidateManager implements CandidateService {
                     var saveCandidate = this.candidateDao.save(candidate);
                     this.userService.register(saveCandidate);
                     this.verificationService.add(saveCandidate);
-                    System.out.println("Üye: "+candidate.getFirst_name() + " " +candidate.getLast_name() + " " + Messages.Successful);
+                    System.out.println("Üye: "+candidate.getFirstName() + " " +candidate.getLastName() + " " + Messages.Successful);
                     return new SuccessResult(Messages.Successful);
                 }
                 System.out.println(Messages.IdentityNumberFailed);

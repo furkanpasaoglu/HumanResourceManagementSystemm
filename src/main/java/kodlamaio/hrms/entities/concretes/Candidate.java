@@ -17,19 +17,19 @@ import java.util.Date;
 public class Candidate extends User {
 
     @Column(name = "first_name")
-    private String first_name;
+    private String firstName;
 
     @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
 
     @Column(name = "identity_number")
     private String identityNumber;
 
     @Column(name = "year_of_birth")
-    private LocalDate year_of_birth;
+    private LocalDate yearOfBirth;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;

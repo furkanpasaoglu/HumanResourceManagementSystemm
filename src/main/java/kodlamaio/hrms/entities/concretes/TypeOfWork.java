@@ -19,10 +19,10 @@ public class TypeOfWork {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private int typeOfWorkId;
 
     @Column(name = "name")
-    private String name;
+    private String typeOfWorkName;
 
     @Column(name = "create_date")
     private Date createDate;

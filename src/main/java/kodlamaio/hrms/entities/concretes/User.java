@@ -26,10 +26,10 @@ public class User {
     private String password;
 
     @Column(name = "confirm_password")
-    private String confirm_password;
+    private String confirmPassword;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;

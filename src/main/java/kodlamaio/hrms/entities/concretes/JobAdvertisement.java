@@ -21,16 +21,6 @@ public class JobAdvertisement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int jobAdvertisementId;
 
-
-    //@Column(name = "employer_id")
-    //private int employerId;
-
-    //@Column(name = "job_position_id")
-    //private int jobPositionId;
-
-    //@Column(name = "city_id")
-    //private int cityId;
-
     @Column(name = "description")
     private String description;
 

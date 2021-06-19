@@ -25,7 +25,7 @@ public class Technology {
     private int candidateId;
 
     @Column(name = "name")
-    private String name;
+    private String technologyName;
 
     @Column(name = "create_date")
     private Date createDate;

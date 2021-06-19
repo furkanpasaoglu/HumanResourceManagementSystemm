@@ -24,9 +24,9 @@ public class VerificationManager implements VerificationService {
     @Override
     public Result add(User user) {
         verification = new Verification();
-        verification.setUser_id(user.getId());
+        verification.setUserId(user.getId());
         verification.setConfirm(true);
-        verification.setCreate_date(new Date());
+        verification.setCreateDate(new Date());
 
         this.sendVerificationMail();
         this.verifiedUser();
