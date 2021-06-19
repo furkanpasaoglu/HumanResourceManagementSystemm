@@ -25,7 +25,7 @@ public class JobPosition {
     private String name;
 
     @Column(name = "create_date")
-    private Date create_date;
+    private Date createDate;
 
     @Column(name = "active")
     private boolean active;
